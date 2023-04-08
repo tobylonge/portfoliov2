@@ -1,0 +1,50 @@
+/**
+ * Variables
+ */
+
+/*
+ * Fonts
+ * ========================================================================== */
+
+$font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+  system-ui, sans-serif;
+$font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+
+$body-font: $font-sans;
+$body-font-weight: 400;
+
+$font-base: 1rem;
+$font-sm: 0.875rem;
+$font-xs: 0.8125rem;
+$font-xxs: 0.75rem;
+$paragraph: 1.6rem;
+$line-height: 2.4rem;
+$border-radius: 5px;
+
+/*
+  * Theme Colors (Use https://color-mode.nuxtjs.org/)
+  * ========================================================================== */
+
+:root {
+  --dark-navy: #020c1b;
+  --navy: #0b1930;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2, 12, 27, 0.7);
+  --dark-slate: #495670;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --green-tint: rgba(100, 255, 218, 0.1);
+}
+
+// .dark-mode {
+//   --color: #ebf4f1;
+//   --color-primary: #41b38a;
+//   --color-secondary: #fdf9f3;
+//   --bg: #091a28;
+//   --bg-secondary: #071521;
+//   --border-color: #0d2538;
+// }
