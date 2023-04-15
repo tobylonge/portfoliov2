@@ -1,7 +1,13 @@
 <template>
-  <div>
-    <AppHeader />
+  <AppHeader />
+  <div class="layout">
     <slot />
-    <AppFooter />
+    <ContactMe />
   </div>
+  <AppFooter />
 </template>
+<style scoped>
+.layout {
+  min-height: 100vh;
+}
+</style>

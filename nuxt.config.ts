@@ -2,8 +2,7 @@
 export default defineNuxtConfig({
   vite: {
     css: { devSourcemap: true },
-},
-css: [
-  "@/assets/style/global.scss",
-]
+  },
+  css: ['@/assets/style/global.scss'],
+  modules: ['nuxt-icon'],
 })
