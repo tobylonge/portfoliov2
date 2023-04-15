@@ -1,60 +1,59 @@
 <template>
   <div class="footer">
-    <h4>What’s Next</h4>
-    <h2>Get in Touch</h2>
-    <p>
-      If you have any questions, requests or comments … or you just want to say
-      hello, don’t hesitate to contact me. I will try my best to respond as soon
-      as possible
-    </p>
-    <a
-      class="email-link"
-      href="mailto:tobylonge@gmail.com"
-      rel="noopener noreferrer"
-      target="_blank"
-      >Contact Me</a
-    >
+    <div class="container">
+      <div class="footer__social-links">
+        <a><Icon name="simple-line-icons:social-github" /></a>
+        <a><Icon name="simple-line-icons:social-dribbble" /></a>
+        <a><Icon name="simple-line-icons:social-linkedin" /></a>
+        <a><Icon name="simple-line-icons:envelope" /></a>
+        <a><Icon name="simple-line-icons:social-twitter" /></a>
+      </div>
+      <div class="footer__contact">
+        <p>© Oluwatobi Alonge {{ new Date().getFullYear() }} | tobylonge@gmail.com</p>
+      </div>
+      <div class="footer__switch">
+        <!-- Work on this later -->
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/style/variables';
 .footer {
-  text-align: center;
-  h4 {
-    margin: 2rem 0 1rem;
-    color: var(--green);
-    font-family: $font-mono;
-    font-size: $font-sm;
-    font-weight: 400;
-  }
-  h2 {
-    font-weight: 600;
-    color: var(--lightest-slate);
-    font-size: 2.5rem;
-  }
-  p {
-    margin: 1rem auto;
-    font-weight: 400;
-    font-size: 1.5rem;
-    width: 90%;
-    @media (min-width: 768px) {
-      width: 60%;
+  background: var(--light-navy);
+  padding: 1rem 0;
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    @media (max-width: 768px) {
+      grid-template-columns: auto;
+      gap: 10px;
     }
   }
-  .email-link {
-    color: var(--green);
-    background-color: transparent;
-    border: 1px solid var(--green);
-    border-radius: $border-radius;
-    padding: 1.25rem 1.75rem;
-    font-size: $font-sm;
-    font-family: $font-mono;
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    margin-top: 3rem;
+  &__social-links {
+    display: flex;
+    align-items: center;
+    color: var(--light-slate);
+    @media (max-width: 768px) {
+      display: block;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    a {
+      padding-right: 1.5rem;
+      line-height: 0;
+      &:last-child {
+        padding: 0;
+      }
+    }
+  }
+  &__contact {
+    margin: 0 auto;
+    p {
+      line-height: 0;
+    }
   }
 }
 </style>

@@ -17,6 +17,8 @@ $font-base: 1rem;
 $font-sm: 0.875rem;
 $font-xs: 0.8125rem;
 $font-xxs: 0.75rem;
+$font-xl: 1.25rem;
+$font-xxl: 1.5rem;
 $paragraph: 1.6rem;
 $line-height: 2.4rem;
 $border-radius: 5px;
@@ -38,6 +40,7 @@ $border-radius: 5px;
   --white: #e6f1ff;
   --green: #64ffda;
   --green-tint: rgba(100, 255, 218, 0.1);
+  --navy-shadow: rgba(2, 12, 27, 0.7);
 }
 
 // .dark-mode {

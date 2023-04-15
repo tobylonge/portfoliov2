@@ -2,7 +2,7 @@ body {
   margin: 0px;
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   -webkit-font-smoothing: antialiased;
   background-color: var(--navy);
   color: var(--slate);
@@ -18,34 +18,44 @@ a {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
   @media (min-width: 576px) {
     max-width: 576px;
+    padding: 0;
   }
   @media (min-width: 768px) {
     max-width: 768px;
+    padding: 0;
   }
 
   @media (min-width: 992px) {
     max-width: 992px;
+    padding: 0;
   }
 
   @media (min-width: 1200px) {
     max-width: 1200px;
+    padding: 0;
   }
 }
 
 .heading {
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   position: relative;
   margin: 3.5rem 0px 2.5rem;
   width: 100%;
-  font-size: 1.625rem;
+  font-size: clamp($font-xl, 2vw, $font-xxl);
   white-space: nowrap;
   font-weight: 600;
   color: var(--lightest-slate);
@@ -54,10 +64,62 @@ a {
     content: '';
     display: block;
     position: relative;
-    top: -5px;
     width: 18rem;
     height: 1px;
     margin-left: 1rem;
     background-color: var(--lightest-navy);
+    @media (max-width: 768px) {
+      width: calc(100% - 50px);
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .d-xs-block {
+    display: block !important;
+  }
+  .h-xs-block {
+    display: none !important;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .h-sm-block {
+    display: none !important;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .d-md-block {
+    display: block !important;
+  }
+  .h-md-block {
+    display: none !important;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .h-md-block {
+    display: none !important;
+  }
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+  .d-xl-block {
+    display: block !important;
+  }
+  .h-md-block {
+    display: none !important;
   }
 }
